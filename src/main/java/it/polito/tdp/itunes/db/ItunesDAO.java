@@ -5,6 +5,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.LinkedList;
 import java.util.List;
 import it.polito.tdp.itunes.model.Album;
@@ -137,6 +138,13 @@ public class ItunesDAO {
 			throw new RuntimeException("SQL Error");
 		}
 		return result;
+	}
+
+	public List<Album> getVertici() {
+		
+		String sql = "";
+		
+		return null;
 	}
 	
 	

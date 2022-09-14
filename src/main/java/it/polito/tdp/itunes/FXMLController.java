@@ -60,6 +60,20 @@ public class FXMLController {
 
     @FXML
     void doCreaGrafo(ActionEvent event) {
+    	txtResult.clear();
+    	
+    	int m;
+    	try {
+    		m = Integer.parseInt(txtN.getText());  		
+    	} catch (NumberFormatException e) {
+    		txtResult.appendText("Inserisci un valore numerico prima di creare il grafo");
+    		return;
+    	}
+    	
+    	this.model.creaGrafo(m);
+    	txtResult.appendText("Grafo Creato!\n");
+    	txtResult.appendText("# VERTICI: " +this.model.nVertici() +"\n");
+    	txtResult.appendText("# ARCHI: " +this.model.nArchi() +"\n");
     	
     }
 
